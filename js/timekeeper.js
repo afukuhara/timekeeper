@@ -227,6 +227,9 @@ $(function () {
 	}
 	function show_time() {
 		time_str = format_time(time_inner);
+		if (time_str.startsWith('')) {
+        		time_str = time_str.substring(1);
+        	}
 		nletters = time_str.length;
 		if (nletters != last_nletters) {
 			resize_display();
